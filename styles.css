@@ -1,0 +1,227 @@
+/* Reset and basic styling */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-siz/* Reset and basic styling */
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Container styling */
+#container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Location input styling */
+#location {
+  margin-top: 11%;
+  display: flex;
+  justify-content: center;
+}
+
+#location input[type="text"],
+#location input[type="submit"] {
+  height: 50px;
+  width: 300px;
+  margin: 0 20px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  background: white;
+  font-size: 20px;
+  color: black;
+  border-radius: 50%; /* Make them circular */
+}
+
+#location input::placeholder {
+  color: #000000d0;
+}
+
+/* Weather display styling */
+#tempIcon,
+#temperature {
+  position: absolute;
+  color: white;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%; /* Make them circular */
+}
+
+#weatherCountry,
+#weatherDescription {
+  position: absolute;
+  color: white;
+  /* Adjust positioning and dimensions as needed */
+}
+
+#weatherCountry {
+  font-size: 40px;
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#temperature {
+  font-size: 45px;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#temperature strong {
+  color: red;
+}
+
+#weatherDescription {
+  font-size: 20px;
+  text-transform: capitalize;
+  bottom: 38%;
+  left: 60%;
+}
+
+/* Weather feature styling */
+ul {
+  position: absolute;
+  bottom: 17%;
+  right: 20%;
+}
+
+ul li {
+  font-size: 20px;
+  margin: 20px 0;
+  list-style-type: none;
+  margin-right: 5rem;
+}
+
+/* Additional information styling */
+.h1 {
+  display: none; /* Remove the original element with class "h1" */
+}
+
+/* Custom font
+ing: border-box;
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Container styling */
+#container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-image: url('https://source.unsplash.com/1600x900/?landscape');
+  background-attachment: fixed; /* Make the background image static */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Location input styling */
+#location {
+  margin-top: 11%;
+  display: flex;
+  justify-content: center;
+}
+
+#location input[type="text"],
+#location input[type="submit"] {
+  height: 50px;
+  width: 300px;
+  margin: 0 20px;
+  padding: 0 20px;
+  border: none;
+  outline: none;
+  background: white;
+  font-size: 20px;
+  color: black;
+  border-radius: 50%; /* Make them circular */
+}
+
+#location input::placeholder {
+  color: #000000d0;
+}
+
+/* Weather display styling */
+#tempIcon,
+#temperature {
+  position: absolute;
+  color: white;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%; /* Make them circular */
+}
+
+#weatherCountry,
+#weatherDescription {
+  position: absolute;
+  color: white;
+  /* Adjust positioning and dimensions as needed */
+}
+
+#weatherCountry {
+  font-size: 40px;
+  top: 37%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#temperature {
+  font-size: 45px;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#temperature strong {
+  color: red;
+}
+
+#weatherDescription {
+  font-size: 20px;
+  text-transform: capitalize;
+  bottom: 38%;
+  left: 60%;
+}
+
+/* Weather feature styling */
+ul {
+  position: absolute;
+  bottom: 17%;
+  right: 20%;
+}
+
+ul li {
+  font-size: 20px;
+  margin: 20px 0;
+  list-style-type: none;
+  margin-right: 5rem;
+}
+
+/* Additional information styling */
+.h1 {
+  position: absolute;
+  bottom: 5%;
+  font-size: 1.5rem;
+  font-family: "myFirstFont";
+  color: white;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Define custom font */
+@font-face {
+  font-family: "myFirstFont";
+  src: url("fonts/ti
