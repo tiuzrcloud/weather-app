@@ -1,11 +1,14 @@
 const cityInput = document.querySelector("#city");
 const countryInput = document.querySelector("#country");
 const checkButton = document.querySelector("#check");
-const tempIcon = document.querySelector("#tempIcon"); // Assuming you have this in your HTML
+const tempIcon = document.querySelector("#tempIcon");
 const weatherCountry = document.querySelector("#weatherCountry");
 const temperature = document.querySelector("#temperature");
+const weatherCondition = document.querySelector("#weatherCondition");
+const humidity = document.querySelector("#humidity");
+const container = document.querySelector("#container");
 
-const apiKey = "bd4ea33ecf905116d12af172e008dbae"; // Store API key securely
+const apiKey = "bd4ea33ecf905116d12af172e008dbae";
 
 checkButton.addEventListener("click", async () => {
   try {
@@ -21,13 +24,39 @@ checkButton.addEventListener("click", async () => {
 
     weatherCountry.textContent = `${data.name} / ${data.sys.country}`;
     temperature.innerHTML = `${data.main.temp}°<b>C</b>`;
+    weatherCondition.textContent = `Weather: ${data.weather[0].main}`;
+    humidity.textContent = `Humidity: ${data.main.humidity}%`;
 
-    // ... Assuming you have weather icon logic in script.js, insert it here ...
+    // Set background image based on weather condition
+    setBackground(data.weather[0].main);
 
     cityInput.value = "";
     countryInput.value = "";
   } catch (error) {
     console.error("Error fetching weather data:", error);
-    // Handle errors gracefully, e.g., display an error message to the user
   }
 });
+
+function setBackground(weatherCondition) {
+  let backgroundImageUrl;
+  switch (weatherCondition.toLowerCase()) {
+    case "clear":
+      backgroundImageUrl = "https://source.unsplash.com/1600x900/?sunny";
+      break;
+    case "clouds":
+      backgroundImageUrl = "https://source.unsplash.com/1600x900/?cloudy";
+      break;
+    case "rain":
+      backgroundImageUrl = "https://source.unsplash.com/1600x900/?rain";
+      break;
+    case "thunderstorm":
+      backgroundImageUrl = "https://source.unsplash.com/1600x900/?storm";
+      break;
+    case "snow":
+      backgroundImageUrl = "https://source.unsplash.com/1600x900/?snow";
+      break;
+    default:
+      backgroundImageUrl = "https://source.unsplash.com/1600x900/?weather";
+  }
+  container.style.backgroundImage = `url(${backgroundImageUrl})`;
+}
